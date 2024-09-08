@@ -5,7 +5,7 @@ This project demonstrates the use of AutoML via Akkio to predict mobile phone pr
 
 [Video Demo](https://youtu.be/yp1ItbnqN-Y)
 
-[Product site](https://youtu.be/yp1ItbnqN-Y)
+[Product site](https://app.akkio.com/deployments/82824317-ab17-443c-b8d6-a26f0399ea5d)
 
 ## Project Overview 
 
