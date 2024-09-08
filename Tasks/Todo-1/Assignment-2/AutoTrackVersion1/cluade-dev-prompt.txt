@@ -1,0 +1,68 @@
+Create an neat python flask application to track the Monthly expenses along with the recents spends.
+Features of the applications are it should give a monthly Expense report, List Recent Spends, Add, Update and Modify spends and Option to Fetch Expense from the Image of the receipt. Application should use Gemini’s API to figure out the spend details from the Image that can reduce the manual entry of the Expenses for better user Experience.
+This app should have user intuitive and responsive web interface.
+
+Necessary files
+
+File 1 - Backend 
+
+1. Create route for actions inside the home page actions are
+    1. ExpenseAction like GET,UPDATE and DELETE
+    2. FetchExpenseFromImage through File upload
+2. Handle form submissions
+3. Implement proper message handling for the responses
+
+File 2 - SpendsHandler
+
+1. We’ll use the Files to Store the responses 
+2. Create action - create Expense details like Expense Title, Amount,Date and Description
+3. Update action to update Expense details
+4. Delete action to delete the Expense
+5. Output - Success and Failure response with necessary Data
+6. Validate all the Logics with sample input
+
+File 3 -  ImageProcessor
+
+1. Write a code using Gemini API to prompt using Image and Instructions to fetch Expense from the Image
+2. Prompt Instruction : 
+    
+    Extract Expense details from the Image including total amount spent,Main detail as title, date in yyyy-MM-dd , and
+    Summary in 10 words as Description.
+    
+    1. Date should be in yyyy-MM-dd format. If year is in two digit change it to four
+    2. JSON keys are amount,title,date, and description
+    
+
+File 4 - HTML template 
+
+1. Create a responsive layout using HTML5 with following component
+    1. Component Displaying Monthly Total Expense
+    2. Component to add Expense with Fields Like Upload Receipt, Amount,Expense Title, Date and Description
+    3. Component Lists the Added Expenses with Option to Edit and Delete
+
+File 5 - Javascript
+
+1. Include logics necessary for the components to function
+    1. Logic to Fetch Monthly total Expense
+    2. Logic to Fetch Expense List
+    3. Logic to Add Expense
+    4. Logic to populate Expense data fields based on Uploaded Files response
+2. Expense can be decimals
+3. Populate Expense Details when ImageFile is Uploaded
+
+File 6 - Css
+
+1. Use CSS to create a visually appealing interface
+2. Implement a color scheme and consistent typography
+3. Add subtle animations for better user experience
+4. Ensure mobile responsiveness
+
+Implementation guidelines
+
+1. Keep the code simple and well commented for the beginners
+2. Use Bootstrap or a lightweight CSS framework for quick styling
+3. Suggest best way organize the files and name them accordingly
+4. Implement comprehensive error handling with user-friendly messages
+5. Implement client-side validation for the form
+6. Use AJAX for form submission to avoid page reloads
+7. Provide clear instructions for setting up and running the application
