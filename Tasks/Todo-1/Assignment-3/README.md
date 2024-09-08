@@ -49,7 +49,7 @@ The model was trained using Akkio’s AutoML capabilities. Akkio automatically s
 ## Deployment
 
 The model is accessible via the following public URL:
-- [Mobile Price Prediction Model](https://your-public-url-here.com)
+- [Mobile Price Prediction Model](https://app.akkio.com/deployments/82824317-ab17-443c-b8d6-a26f0399ea5d)
 
 This URL allows you to input mobile features and get a predicted price.
 
@@ -58,13 +58,14 @@ This URL allows you to input mobile features and get a predicted price.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/mobile-price-prediction-akkio.git
+   git clone https://github.com/suriya-shanmugam/Data-Mining
+
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd mobile-price-prediction-akkio
+   cd Tasks/Todo-1/Assignment-3
    ```
 
 3. Explore the dataset and model.
@@ -74,7 +75,7 @@ This URL allows you to input mobile features and get a predicted price.
 ## Usage
 
 The deployed model accepts several features of a mobile phone and predicts its price. To use it:
-- Visit the [Mobile Price Prediction Model](https://your-public-url-here.com).
+- Visit the [Mobile Price Prediction Model](https://app.akkio.com/deployments/82824317-ab17-443c-b8d6-a26f0399ea5d).
 - Input the relevant mobile phone specifications.
 - Get the predicted price in real-time.
 
@@ -84,7 +85,7 @@ The deployed model accepts several features of a mobile phone and predicts its p
 ├── dataset/
 │   └── mobile_price_dataset.csv   # The dataset used in this project
 ├── README.md                      # Project documentation
-└── model/                         # Placeholder for model scripts
+
 ```
 
 
