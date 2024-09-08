@@ -2,6 +2,8 @@
 
 <p> This is protype of the application that helps you track the expenses and helps you to quick add the expense by Uploading a <b> Receipt</b>. It process the Image and auto populate the necessary information smartly using the AI giving the user better experience. 
 
+[Video Demo](https://youtu.be/fHOWOT6Uyrw)
+
 ## Features
 
 - Monthly expense report
@@ -21,8 +23,8 @@
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/expense-tracker.git
-   cd expense-tracker
+   git clone https://github.com/suriya-shanmugam/Data-Mining
+   cd Tasks/Todo-1/Assignment-2/AutoTrackVersion1
    ```
 
 2. Create a virtual environment and activate it:
