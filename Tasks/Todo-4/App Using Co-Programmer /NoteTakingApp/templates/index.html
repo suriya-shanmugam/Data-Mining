@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note-taking App</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .container { display: flex; }
+        .note-list { width: 30%; padding-right: 20px; }
+        .note-detail { width: 70%; }
+        input, textarea { width: 100%; margin-bottom: 10px; }
+        button { margin-right: 10px; }
+        ul { list-style-type: none; padding: 0; }
+        li { cursor: pointer; padding: 5px; margin-bottom: 5px; background-color: #f0f0f0; }
+        li:hover { background-color: #e0e0e0; }
+        .note-image { max-width: 100%; margin-top: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Note-taking App</h1>
+    
+    <div class="container">
+        <div class="note-list">
+            <h2>Notes</h2>
+            <ul id="notesList"></ul>
+        </div>
+        <div class="note-detail">
+            <h2>Create/Update Note</h2>
+            <form id="noteForm">
+                <input type="hidden" id="noteId">
+                <input type="text" id="noteTitle" name="title" placeholder="Note Title">
+                <textarea id="noteContent" name="content" placeholder="Note Content"></textarea>
+                <input type="text" id="noteTags" name="tags" placeholder="Tags (comma-separated)">
+                <input type="file" id="noteImage" name="image" accept="image/*">
+                <button type="submit">Save Note</button>
+                <button type="button" onclick="clearForm()">New Note</button>
+            </form>
+            <div id="noteDisplay"></div>
+        </div>
+    </div>
+
+    <script>
+        async function loadNotes() {
+            const response = await fetch('/notes');
+            const notes = await response.json();
+            const notesList = document.getElementById('notesList');
+            notesList.innerHTML = '';
+            notes.forEach(note => {
+                const li = document.createElement('li');
+                li.textContent = note.title + (note.has_image ? ' 📷' : '');
+                li.onclick = () => loadNote(note.id);
+                notesList.appendChild(li);
+            });
+        }
+
+        async function loadNote(id) {
+            const response = await fetch(`/notes/${id}`);
+            const note = await response.json();
+            document.getElementById('noteId').value = note.id;
+            document.getElementById('noteTitle').value = note.title;
+            document.getElementById('noteContent').value = note.content.text;
+            document.getElementById('noteTags').value = note.tags.join(', ');
+            
+            const noteDisplay = document.getElementById('noteDisplay');
+            noteDisplay.innerHTML = `
+                <h3>${note.title}</h3>
+                <p>${note.content.text}</p>
+                <p>Tags: ${note.tags.join(', ')}</p>
+                <p>Created: ${new Date(note.created_at).toLocaleString()}</p>
+                <p>Updated: ${new Date(note.updated_at).toLocaleString()}</p>
+            `;
+            
+            if (note.image) {
+                const img = document.createElement('img');
+                img.src = `/images/${note.image}`;
+                img.alt = 'Note Image';
+                img.className = 'note-image';
+                noteDisplay.appendChild(img);
+            }
+        }
+
+        async function saveNote(event) {
+            event.preventDefault();
+            const form = document.getElementById('noteForm');
+            const formData = new FormData(form);
+            
+            const noteId = document.getElementById('noteId').value;
+            const tags = document.getElementById('noteTags').value.split(',').map(tag => tag.trim());
+            formData.set('tags', JSON.stringify(tags));
+
+            let url = '/notes';
+            let method = 'POST';
+
+            if (noteId) {
+                url += `/${noteId}`;
+                method = 'PUT';
+            }
+
+            const response = await fetch(url, {
+                method: method,
+                body: formData
+            });
+            
+            const result = await response.json();
+            alert(result.message);
+            clearForm();
+            loadNotes();
+        }
+
+        function clearForm() {
+            document.getElementById('noteForm').reset();
+            document.getElementById('noteId').value = '';
+            document.getElementById('noteDisplay').innerHTML = '';
+        }
+
+        // Load notes when the page loads
+        window.onload = loadNotes;
+
+        // Add event listener for form submission
+        document.getElementById('noteForm').addEventListener('submit', saveNote);
+    </script>
+</body>
+</html>
