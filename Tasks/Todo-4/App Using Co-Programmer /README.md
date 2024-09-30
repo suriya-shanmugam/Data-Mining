@@ -10,8 +10,7 @@ This is a simple yet powerful note-taking application built with Flask and Postg
 - Add tags to notes for easy categorization
 - Attach images to notes
 - View a list of all notes
-- Display full note details, including associated image
-- Responsive web interface
+
 
 ## Requirements
 
@@ -25,8 +24,8 @@ This is a simple yet powerful note-taking application built with Flask and Postg
 
 1. Clone the repository:
    ```
-   git clone https://github.com/yourusername/note-taking-app.git
-   cd note-taking-app
+   git clone https://github.com/suriya-shanmugam/Data-Mining
+   cd Todo4/note-taking-app
    ```
 
 2. Create a virtual environment and activate it:
