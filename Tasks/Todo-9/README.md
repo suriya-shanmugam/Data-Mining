@@ -16,7 +16,7 @@
 
 # Anamoly Detection
  - Colab Notebook -  https://colab.research.google.com/drive/1elJRBJcL7paAZFqruhQd_wPTTk_SNpwL?usp=sharing
- - Video Link -  https://drive.google.com/file/d/1YpHG2GTxBcR-WhHrWvzzbeD_-LiZouIh/view?usp=sharing
+ - Video Link -  https://drive.google.com/file/d/1X_jkXDxBZ8fdKmQst2A2ljyZXXnb-VcM/view?usp=sharing
 
 # Timeseries Clustering
  - Colab Notebook -  https://colab.research.google.com/drive/13P6-UuMHJ9ElUR6_AapGI99Otfu3uhxe?usp=sharing
