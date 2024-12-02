@@ -13,7 +13,7 @@ Explore dimensionality reduction techniques in action through the following exam
 
 3. **PCA using Databricks Notebook**  
    Example leveraging Databricks to perform PCA on large-scale datasets:  
-   [Databricks Notebook Link](https://dbc-8704f04e-2339.cloud.databricks.com/editor/notebooks/1369689167571328?o=2652802991187363)
+   [Databricks Notebook Link](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2060557526894973/394769080940870/7309200838449673/latest.html)
 
 ## Abstract
 Dimensionality reduction is a key step in simplifying high-dimensional datasets for analysis, visualization, and computational efficiency. This repository explores various linear and nonlinear dimensionality reduction techniques, including **PCA**, **Kernel PCA**, **t-SNE**, **UMAP**, **ISOMAP**, and more. 
