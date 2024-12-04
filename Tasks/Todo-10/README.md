@@ -6,15 +6,17 @@ Explore dimensionality reduction techniques in action through the following exam
 1. **PCA on Tabular Data**  
    Example showing PCA applied to a structured dataset for feature reduction:  
    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1odE317TpTtf5koe5iICBlbvCoI3GaWlf?usp=sharing)
+   - [Video Link](https://drive.google.com/file/d/1MiQK7EVXET4p8I5IKYNaxQisJ2CPVXW_/view?usp=sharing)
 
 2. **PCA on Image Data**  
    Example demonstrating PCA for image compression and feature extraction:  
    [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1LwCVxO02GJMf3j9piBkneMsckLHt7IZL?usp=sharing)
-
+   - [Video Link](https://drive.google.com/file/d/1pnRzHxpzTu1649-Ew44MA7TUFBTwsPdx/view?usp=sharing)
+   
 3. **PCA using Databricks Notebook**  
    Example leveraging Databricks to perform PCA on large-scale datasets:  
    [Databricks Notebook Link](https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/2060557526894973/394769080940870/7309200838449673/latest.html)
-
+   - [Video Link](https://drive.google.com/file/d/1W5bc7kFNYislDGPGoGSj2BmWvp-fuLvn/view?usp=sharing)
 ## Abstract
 Dimensionality reduction is a key step in simplifying high-dimensional datasets for analysis, visualization, and computational efficiency. This repository explores various linear and nonlinear dimensionality reduction techniques, including **PCA**, **Kernel PCA**, **t-SNE**, **UMAP**, **ISOMAP**, and more. 
 
